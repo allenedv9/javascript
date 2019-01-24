@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js.js"></script>
+</head>
+<style>
+    body{ width: 75%; margin: 0 auto;    }
+</style>
+<body>
+
+    <h3>Ejercicio 1</h3>
+    <p>Al pulsar un botón, mostrar una ventana con el mensaje hola mundo llamando a función definida en otro fichero entre etiquetas <script></script></p>
+
+    <button onclick="f1()">Mostrar mensaje</button>
+
+    <hr>
+
+    <h3>Ejercicio 2</h3>
+    <p>Al pulsar un botón, mostrar una ventana con un mensaje que indique si el número introducido en el input tipo number es divisible o no entre 2. Si al pulsar el botón no hay un número en el input aparecerá el mensaje "Se debe introducir un número "
+    Ej: El número 4 es divisible entre 2 </p>
+
+    <input type="number" name="" id="ejer2">
+    <button onclick="f2()">Comprobar si es divisible entre 2</button>
+
+    <hr>
+
+    <h3>Ejercicio 3</h3>
+    <p>Al pulsar un botón, mostrar los números impares del 1 al 100 en un textarea</p>
+
+    <button onclick="f3()">Mostrar los número impares del 1 al 100</button>
+    <textarea name="" id="ejer3" cols="90" rows="3"></textarea>
+
+    <hr>
+
+    <h3>Ejercicio 4</h3>
+    <p>Definir el siguiente array:
+       var alumnos = ['Sánchez', 'Sánchez', 'López', 'Cuesta', 'Álvarez', 'Zambrano', 'Sevilla', 'Álvarez', 'Cuesta', 'Álvarez', 'Sevilla', 'López', 'Jiménez'];
+       A continuación, ordenar el array alfabéticamente e identificar los nombres repetidos. Posteriormente, se tendrá que mostrar por pantalla los nombres repetidos y el número de veces que éstos se repiten
+    </p>
+
+    <button onclick="f4()">Ordenar el array</button>
+    <p id="a"></p>
+    
+    <hr>
+
+    <h3>Ejercicio 5</h3>
+    <p>Definir el siguiente array:
+        var numeros = [4,0,3,4,7,3,5,8,1,8,8,0,2,3,1,2,5,7,3,2,5,1];
+        Buscar en dicho array los números 5,6,8 y 13. En caso de encontrarse, deberá de indicarse la posición del mism. en caso contrario, se debe de visualizar un mensaje indicando que ese número no existe.</p>
+
+        <button onclick="f5()">Comprobar números 5,6,8 y 13</button>
+    <p id="b"></p>
+
+    <hr>
+
+    <h3>Ejercicio 6</h3>
+    <p>Definir el siguiente array:
+        var numeros = [4,0,3,4,7,3,5,8,1,8,8,0,2,3,1,2,5,7,3,2,5,1];
+        A continuación, generar otro array con todos los números impares ordenados seguidos de todos los pares ordenados también
+    </p>
+
+    <button onclick="f6()">Ordenar Par/Impar</button>
+    <p id="c"></p>
+
+    <hr>
+
+    <h3>Ejercicio 7</h3>
+    <p>Definir el siguiente array:
+        var dias = ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
+        A continuación, visualizar cada uno de los elementos del array con la primera letra en minuscula.
+    </p>
+
+    <button onclick="f7()">Poner en minuscula la primera letra</button>
+    <p id="d"></p>
+
+    <hr>
+
+    <h3>Ejercicio 8</h3>
+    <p>Definir el siguiente array:
+        var numeros = [43,0,34,4,743,-45,3,5,8,13,8,344,0,23,3,1233,2,5,734,3,2234,5,1];
+        A continuación, ordenarlo aplicando el método de la burbuja(de manera inversa, es decir, de mayor a menor) y visualizarlo.
+    </p>
+
+    <button onclick="f8()">Método de la burbuja</button>
+    <p id="f"></p>
+    <p id="e"></p>
+
+    <hr>
+
+    <h3>Ejercicio 9</h3>
+    <p>Definir el siguiente array:
+        var numeros=[43,0,34,4,743,-45,3,5,8,13,8,344,0,23,3,1233,2,5,734,3,2234,5,1];
+        A continuación, ordenarlo buscando el mayor, añadiéndolo al array ordenado y eliminándolo del original hasta que el array original quede vacío
+    </p>
+
+    <button onclick="f9()">Ordenar y vaciar</button>
+    <p id="g"></p>
+
+    <hr>
+
+    <h3>Ejercicio 10</h3>
+    <p>Crear un objeto "Persona", el cual tendrá 5 propiedades (Nombre,Apellido,DNI,Dirección,Teléfono) y 4 métodos, los cuales tendrán que mostrar mediante un alert el nombre, el apellido, el DNI, y la direccion de la persona</p>
+
+    <button onclick="persona.verNombre()">Ver nombre</button>
+    <button onclick="persona.verApe()">Ver apellido</button>
+    <button onclick="persona.verDni()">Ver DNI</button>
+    <button onclick="persona.verDire()">Ver dirección</button>
+
+    <hr>
+
+    <h3>Ejercicio 11</h3>
+    <p>Crear un objeto "Curso", el cual tendrá 5 propiedades (Nombre, Código, Tutor, num alumnos, Año) y 3 métodos, los cuales tendrán que mostrar mediante un alert el código, el num de alumnos y el año</p>
+
+    <button onclick="curso.verCod()">Ver Código</button>
+    <button onclick="curso.verNum()">Ver Numero de alumnos</button>
+    <button onclick="curso.verAnio()">Ver Año</button>
+
+    <hr>
+
+    <h3>Ejercicio 13</h3>
+    <p>Crea un array de las asignaturas del 1º curso de desarrollo de aplicaciones Web usando la notación JSON</p>
+
+    <p id="q"></p>
+    <button onclick="f13()">JSON</button>
+
+    <hr>
+
+    <h3>Ejercicio 15</h3>
+    <p>Crear 2 excepciones matemáticas</p>
+    <button onclick="f15()">Llama a la funcion 15</button>
+</body>
+</html>
