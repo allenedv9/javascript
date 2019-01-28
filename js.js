@@ -33,7 +33,8 @@ function f4() {
     
     var alumnos = ['Sánchez', 'Sánchez', 'López', 'Cuesta', 'Álvarez', 'Zambrano', 'Sevilla', 'Álvarez', 'Cuesta',                       'Álvarez', 'Sevilla', 'López', 'Jiménez'];
 
-   alumnos.sort();
+   var alum = alumnos;
+
     
    document.getElementById('a').innerHTML = alumnos;
 
@@ -206,8 +207,7 @@ var curso = new Curso();
 /*Ejercicio 13*/
 
 function f13(){
-var objeto, x;
-objeto = {
+var objeto = {
   "asig1":"Java",
   "asig2":"Entornos",
   "asig3":"Sistemas"
