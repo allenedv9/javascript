@@ -47,8 +47,19 @@ function f4() {
 function f5() {
     
     var numeros = [4,0,3,4,7,3,5,8,1,8,8,0,2,3,1,2,5,7,3,2,5,1];
+    var numBus = [5,6,8,13];
+    
+    for (let x = 0; x < numBus.length; x++) {
+       var conf = numeros.includes(numBus[x]);
+       if(conf == true){
+           var pos = numeros.indexOf(numBus[x]);
+            document.getElementById('b').innerHTML += "La posición de: " + numBus[x] + " es: " + pos + "<br>"; 
+       }else{
+           alert("el numero " + numBus[x]+ "no se encuentra");
+       }
 
- 
+        
+    }
    
 }
 
@@ -124,36 +135,47 @@ function f8(){
                         OBJETOS
   *************************************************************************/
 
- var persona = new Persona();
+//  var persona = new Persona();
 
  
- function Persona(){
+    class Persona{
+        constructor(){
 
-    this.nombre = "Allende";
-    this.apellido = "Edv";
-    this.dni = "789654123c";
-    this.direccion = "springfield";
-    this.telefono = "789654123";
+            this.nombre = "Allende";
+            this.apellido = "Edv";
+            this.dni = "789654123c";
+            this.direccion = "springfield";
+            this.telefono = "789654123";
+        }
 
 
-    this.verNombre= function(){
+
+    verNombre(){
         alert (this.nombre);
    
     }
-    this.verApe = function(){
+    verApe (){
         alert (this.apellido);
         
     }
-   this.verDni = function(){
+    verDni (){
        alert (this.dni);
        
    }
-   this.verDire = function(){
+   verDire (){
        alert (this.direccion);
        
    }
 }
 
+function ejer10(){
+    var persona = new Persona();
+
+    persona.verNombre();
+    persona.verApe();
+    persona.verDni();
+    persona.verDire();
+}
 /*
 function verNombre(){
      alert (persona.nombre);
@@ -175,31 +197,40 @@ function verDire(){
 /*******************************************************************************/
 
 /*Ejercicio 11*/
-var curso = new Curso();
-
- 
- function Curso(){
-
-    this.nombre = "WEB";
-    this.cod = "939";
-    this.num = "17";
-    this.tutor = "Marcius";
-    this.anio = "2018-2019";
 
 
-    this.verCod= function(){
-        alert (this.cod);
-   
+class Curso{
+    
+    constructor(){
+
+        this.nombre = "WEB";
+        this.cod = "939";
+        this.num = "17";
+        this.tutor = "Marcius";
+        this.anio = "2018-2019";
+        
     }
-    this.verNum = function(){
+    
+    verCod(){
+        alert (this.cod);
+        
+    }
+    verNum(){
         alert (this.num);
         
     }
-   this.verAnio = function(){
-       alert (this.anio);
-       
-   }
-  
+    verAnio (){
+        alert (this.anio);
+        
+    }
+    
+}
+function ejer11(){
+
+    var curso = new Curso();
+    curso.verCod();
+    curso.verAnio();
+    curso.verNum();
 }
 
 /*******************************************************************************/
@@ -212,10 +243,39 @@ var objeto = {
   "asig2":"Entornos",
   "asig3":"Sistemas"
 };
+      for ( var key in objeto) {
+          document.getElementById("q").innerHTML += key + " -> " + objeto[key] + "<br>";
+      }
 
-document.getElementById("q").innerHTML = objeto["asig1"] + objeto["asig2"] + objeto["asig3"];
+
 }
 
+/*Ejercicio 14*/
+
+class Alumno{
+    constructor(nombre, apellido, dni, curso){
+
+        this.nombre=nombre;
+        this.apellido = apellido;
+        this.dni = dni;
+        this.curso = curso;
+    }
+    get_nombre(){
+        return this.nombre; 
+    }
+    get_apellido(){
+        return this.apellido;
+    }
+    get_dni(){
+        return this.dni;
+    }
+}
+function f14(){
+    var alum = new Alumno("Allen","edv","1452","web");
+    document.getElementById('w').innerHTML += alum.get_nombre();
+    document.getElementById('w').innerHTML += alum.get_apellido();
+    document.getElementById('w').innerHTML += alum.get_dni();
+}
 /*Ejercicio 15*/ 
 function f15(){
     try{
