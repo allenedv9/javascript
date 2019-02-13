@@ -251,8 +251,29 @@ var objeto = {
 }
 
 /*Ejercicio 14*/
+function Alumnos(nombre,apellido,dni,curso){
+    this.nombre=nombre;
+    this.apellido = apellido;
+    this.dni = dni;
+    this.curso = curso;
+    this.mostrarNombre = function(){
+        alert(this.nombre);
+    }
+}
+function f14(){
+    
+    var elAlumno = new Alumnos("Allen","edv","44542584b","daw2");
+    // alert("El alumno: " + elAlumno.nombre + " " + elAlumno.apellido + " realiza el curso: " + elAlumno.curso);
+    elAlumno.mostrarNombre();
+    elAlumno.verDni=function(){
+        alert(this.dni);
+    }
+    elAlumno.verDni();
 
-class Alumno{
+}
+
+
+/*class Alumno{
     constructor(nombre, apellido, dni, curso){
 
         this.nombre=nombre;
@@ -270,12 +291,12 @@ class Alumno{
         return this.dni;
     }
 }
-function f14(){
+//function f14(){
     var alum = new Alumno("Allen","edv","1452","web");
     document.getElementById('w').innerHTML += alum.get_nombre();
     document.getElementById('w').innerHTML += alum.get_apellido();
     document.getElementById('w').innerHTML += alum.get_dni();
-}
+//}*/
 /*Ejercicio 15*/ 
 function f15(){
     try{
